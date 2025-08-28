@@ -1,0 +1,193 @@
+
+ssh swombadmin@20.198.104.253
+Swomb@1392022
+
+web process show cd
+-----------------
+netstat -tulnp | grep 4203
+
+
+service process show cd
+-----------------
+ps -ef | grep java
+
+
+kill commant
+--------------
+sudo kill -9 id
+
+npm run build --prod
+
+
+step 1: vs -> apiservices.ts -> change isLive: boolean = false; to isLive: boolean = true;
+
+step 2: vs -> apiservices.ts -> change this.url = "http://localhost:"; to this.url = "http://20.198.104.253:";
+
+app.component.ts -> construnctor ->  command this.messagingService.requestPermission();
+   this.messagingService.receivedMsg();
+
+app.module.ts -> command initializeApp(environment.firebase)
+
+step 3: scp dist.zip swombadmin@20.198.104.253:/home/swombadmin/tnbus/web
+
+step 4: ssh swombadmin@20.198.104.253
+	Swomb@1392022
+
+step 5: cd /home/swombadmin/source/web -> unzip Bus-web.zip
+
+step 6 : cd /home/swombadmin/source/web -> chmod 777 -R Bus-web.zip
+
+step 7 :  cd /home/swombadmin/source/web -> cd  Bus-web -> npm i or npm i --f
+
+step 8 :  cd /home/myjobz/file-move/build/web/Bus-web -> chmod 777 -R node_modules
+
+step 9 : cd /home/myjobz/file-move/build/web/Bus-web# 
+### version 13 ####
+nohup ng serve --host 0.0.0.0 --ssl false --port 4200 --public-host 20.198.104.253 --live-reload=false --disableHostCheck true &
+
+### version 14 ####
+nohup ng serve --host 0.0.0.0 --ssl false --port 4200 --public-host 20.198.104.253 --live-reload=false --disable-host-check &
+
+tail -f nohup.out
+#############ADD SERVICES###############
+step 10 : change the file format for your project in document saved the file save as .sh
+
+step 11 : open the terminal from the place where we have saved the file (confirm .jar file is added to the file)
+
+step 12 : bash service_upload.sh 
+	  enter the password
+
+step 13 : change the file format for your project in document
+
+step 14 : scp run_service.sh  swombadmin@20.198.104.253:/home/swombadmin/source/service from the place where we have saved the file
+          enter the password
+
+file move to /home/myjobz/file-move/build/service and run below command
+
+step 15 : bash run_service.sh
+
+
+#############ADD DB###############
+
+step 16 : scp psql.zip swombadmin@20.198.104.253:/home/swombadmin/source/db from the place where we have saved the file
+          enter the password
+
+/home/swombadmin/source/db
+
+step 17 : unzip the file moved
+ 
+step 18 : chmod 777 -R psql
+
+/home/swombadmin/source/db/psql
+
+step 19 : sudo su postgres
+
+step 20 : psql
+
+step 21 : \c bus_db
+
+step 22 : \i run.sql; 
+
+_________________________________________________________________________________________________________________________________________________
+
+#############First setup###############
+
+ssh swombadmin@20.198.104.253
+Swomb@1392022
+
+web process show cd
+-----------------
+
+netstat -tulnp | grep 4203
+
+
+service process show cd
+-----------------
+ps -ef | grep java
+
+
+kill commant
+--------------
+sudo kill -9 id
+
+
+apt install openjdk-8-jre-headless 
+apt install openjdk-8-jdk-headless 
+
+sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt bionic-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+
+sudo apt-get update
+sudo apt-get -y install postgresql-11
+
+
+sudo apt-get update
+sudo apt-get install zlib1g-dev
+
+apt --fix-broken install
+
+curl -Lo kong-2.6.1.amd64.deb "https://download.konghq.com/gateway-2.x-ubuntu-$(lsb_release -cs)/pool/all/k/kong/kong_2.6.1_amd64.deb"
+sudo dpkg -i kong-2.6.1.amd64.deb
+
+sudo -i -u postgres psql
+
+curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+
+sudo apt-get install -y nodejs
+
+
+sudo apt-get install -y nodejs
+node -v
+v16.15.1
+ npm -v
+8.11.0
+
+
+
+scp -P 22 JordanUser-0.0.1-SNAPSHOT.jar serveradmin@52.143.191.153:/home/serveradmin
+
+sudo apt purge ng-common ng-latin
+
+sudo npm install -g @angular/cli
+
+nohup ng serve --host 0.0.0.0 --port 4200 --public-host 20.198.104.253 --live-reload=false &
+
+nohup ng serve --host 0.0.0.0 --ssl true --port 443 --public-host 20.198.104.253 --live-reload=false &
+
+
+nohup http-server dist/ -p 4203 &
+
+
+cp -r  portal media
+
+tail -f nohup.out
+
+
+8220686438
+Apple123
+
+
+
+pg_dump bus_db > tn_bus_backup.sql
+
+psql bus_db < tn_bus_backup.sql
+
+scp /home/swomb/Music/Goodone/TruckLynk/dist.zip truklynk@4.240.119.91:/home/truklynk/Truklynk/web
+
+
+nohup java -jar goodone-service-1.0.0-SNAPSHOT-fat.jar -conf ./local.json &
+
+
+nohup http-server dist/ -p 3000 &
+
+
+ssh truklynkUser123@4.240.102.85
+truklynkSwomb@123
+
+
+4.240.102.85
+
+
+get_driver_route
+
+
